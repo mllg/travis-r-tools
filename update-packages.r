@@ -14,9 +14,9 @@ tryCatch({
   if (length(req)) {
     cat(sprintf("Updating %i binary packages: %s\n", length(req), paste(req, collapse = ", ")), file = stdout())
     options(repos = "http://cran.rstudio.com")
-    install.packages(req)
+    install.packages(req, lib = user.lib)
   } else {
-    message("All binary packages up-to-date.\n", file = stdout())
+    cat("All binary packages up-to-date.\n", file = stdout())
   }
 }, error = function(e) { cat(e, "\n", file = stderr()); flush(stderr()); q(status = 1L, save = "no") })
 q(status = 0L, save = "no")
