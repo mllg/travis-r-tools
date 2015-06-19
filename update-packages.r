@@ -2,6 +2,8 @@
 # in contrast to 'update.packages()' this will also update
 # packages in the system lib by 'overloading' these packages
 # with an installation to the user lib
+
+options(repos = "http://cran.rstudio.com")
 tryCatch({
   cat("Searching for outdated packages ...\n", file = stdout())
   getPkgs = function(x) if (is.null(x)) character(0L) else unname(x[, "Package"])
@@ -13,7 +15,6 @@ tryCatch({
 
   if (length(req)) {
     cat(sprintf("Updating %i binary packages: %s\n", length(req), paste(req, collapse = ", ")), file = stdout())
-    options(repos = "http://cran.rstudio.com")
     install.packages(req, lib = user.lib)
   } else {
     cat("All binary packages up-to-date.\n", file = stdout())
