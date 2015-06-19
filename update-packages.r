@@ -1,8 +1,4 @@
-# updates all outdated packages
-# in contrast to 'update.packages()' this will also update
-# packages in the system lib by 'overloading' these packages
-# with an installation to the user lib
-
+# updates all outdated packages in the system lib
 options(repos = "http://cran.rstudio.com")
 tryCatch({
   cat("Searching for outdated packages ...\n", file = stdout())
