@@ -1,4 +1,5 @@
-# updates all outdated packages in the system lib
+# updates all packages in the system lib which are outdated
+# (the binary packages on travis)
 options(repos = "http://cran.rstudio.com")
 tryCatch({
   cat("Searching for outdated packages ...\n", file = stdout())
