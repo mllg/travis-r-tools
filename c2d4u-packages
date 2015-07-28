@@ -17,7 +17,6 @@ CoxBoost
 crs
 Cubist
 deepnet
-deepnet
 DiceKriging
 DiceOptim
 DiscriMiner
@@ -66,7 +65,6 @@ penalized
 pls
 plyr
 PMCMR
-PMCMR
 pROC
 randomForest
 randomForestSRC
@@ -80,7 +78,6 @@ ROCR
 rpart
 rrlda
 rsm
-RSNNS
 RSNNS
 RWeka
 sda
