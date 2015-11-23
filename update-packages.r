@@ -16,5 +16,5 @@ tryCatch({
   } else {
     cat("All binary packages up-to-date.\n", file = stdout())
   }
-}, error = function(e) { cat(e, "\n", file = stderr()); flush(stderr()); q(status = 1L, save = "no") })
+}, error = function(e) { cat(e$message, "\n", file = stderr()); flush(stderr()); q(status = 1L, save = "no") })
 q(status = 0L, save = "no")
