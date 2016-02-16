@@ -2,6 +2,7 @@ options(repos = "http://cloud.r-project.org")
 tryCatch({
   cat("Searching for outdated packages ...\n", file = stdout())
   getPkgs = function(x) if (is.null(x)) character(0L) else unname(x[, "Package"])
+  user.lib = .libPaths()[1L]
   sys.lib = .libPaths()[2L]
   req = getPkgs(old.packages())
 
